@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paveenuch Akaraparthanameitee | Junior Frontend Developer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9fafb;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #2d3748;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+      color: #2d3748;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    ul li {
+      background: #edf2f7;
+      margin-bottom: 0.5rem;
+      padding: 0.8rem;
+      border-radius: 5px;
+    }
+    .project {
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      background: #fff;
+    }
+    .project h3 {
+      margin-top: 0;
+      color: #2d3748;
+    }
+    footer {
+      background: #2d3748;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Paveenuch Akaraparthanameitee</h1>
+    <p>Aspiring Junior Frontend Developer | Analytical & Research Background</p>
+    <p>Email: neen.akrpvn@gmail.com | Location: Nagasaki, Japan</p>
+  </header>
+  <main>
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I am a Master's student in Environmental Engineering at Nagasaki University with strong 
+        problem-solving, research, and analytical skills. While my academic background is in 
+        engineering and scientific research, I am now transitioning into software development 
+        with a strong interest in frontend technologies. My persistence, adaptability, and 
+        ability to learn quickly make me a strong candidate for a junior frontend developer role 
+        at JAMM.
+      </p>
+    </section>
+
+    <section>
+      <h2>Transferable Skills</h2>
+      <ul>
+        <li><strong>Problem-Solving:</strong> Designed and executed research experiments requiring logical thinking and step-by-step planning — directly applicable to debugging and building software.</li>
+        <li><strong>Data Analysis:</strong> Experienced in interpreting complex data (remote sensing, lab results) — skills useful for working with APIs, charts, and UI data handling.</li>
+        <li><strong>Collaboration:</strong> Worked in international research teams, presenting at conferences in Japan and Thailand.</li>
+        <li><strong>Adaptability:</strong> Successfully studied and worked across Thailand and Japan, learning new languages (English, Japanese).</li>
+        <li><strong>Technical Writing & Communication:</strong> Published and presented research results, ensuring clarity — beneficial for documentation and teamwork.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <p><strong>Master of Engineering (Environmental Engineering)</strong> — Nagasaki University, Japan (2023–2025)</p>
+      <p><strong>Master of Engineering (Environmental Engineering)</strong> — Chiang Mai University, Thailand (2020–2023)</p>
+      <p><strong>Bachelor of Engineering (Mining Engineering)</strong> — Chiang Mai University, Thailand (2014–2019)</p>
+    </section>
+
+    <section>
+      <h2>Languages</h2>
+      <ul>
+        <li>Thai: Native</li>
+        <li>English: IELTS 6.0</li>
+        <li>Japanese: JLPT N5</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+
+      <div class="project">
+        <h3>1. To-Do List App</h3>
+        <p>A simple app to add and remove daily tasks.</p>
+        <input id="task" placeholder="New Task">
+        <button onclick="addTask()">Add</button>
+        <ul id="list"></ul>
+      </div>
+
+      <div class="project">
+        <h3>2. Calculator</h3>
+        <p>A basic calculator for addition.</p>
+        <input id="num1" type="number"> + 
+        <input id="num2" type="number"> 
+        <button onclick="calc()">=</button>
+        <span id="result"></span>
+      </div>
+
+      <div class="project">
+        <h3>3. Personal Portfolio Card</h3>
+        <div style="border:1px solid #ccc;padding:1rem;border-radius:8px">
+          <h2>Hello, I’m Paveenuch 👋</h2>
+          <p>Aspiring Frontend Developer eager to learn React and JavaScript.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Why JAMM?</h2>
+      <p>
+        JAMM’s mission to build modern and user-friendly applications aligns with my 
+        determination to grow as a developer. I am motivated to contribute fresh perspectives, 
+        attention to detail, and strong discipline from my engineering background. Though I am 
+        new to frontend development, I am eager to learn React, JavaScript, and design systems, 
+        and I believe my scientific approach and persistence will make me a valuable addition to 
+        the team.
+      </p>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 Paveenuch Akaraparthanameitee</p>
+  </footer>
+
+  <script>
+    function addTask() {
+      const task = document.getElementById("task").value;
+      if (task) {
+        const li = document.createElement("li");
+        li.textContent = task;
+        li.onclick = () => li.remove();
+        document.getElementById("list").appendChild(li);
+        document.getElementById("task").value = "";
+      }
+    }
+    function calc() {
+      const a = parseFloat(document.getElementById("num1").value);
+      const b = parseFloat(document.getElementById("num2").value);
+      document.getElementById("result").textContent = a + b;
+    }
+  </script>
+</body>
+</html>
